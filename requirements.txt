@@ -1,0 +1,3 @@
+django
+django-restframewort
+psycopg2-binary
