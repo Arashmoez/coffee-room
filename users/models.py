@@ -53,7 +53,7 @@ class OTP(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     is_used = models.BooleanField(default=False)
 
-    @classmethod
+    @property
     def is_expired(self):
         return timezone.now() > self.created_at + timedelta(minutes=2)
 
